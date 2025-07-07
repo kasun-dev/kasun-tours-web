@@ -1,10 +1,11 @@
 import HomePg from './pages/HomePg/page';
+import ClientLayout from './clientLayout'
 
 export default function Page() {
   return (
-    <div>
-      {/*load home page*/}
-      <HomePg/>
-    </div>
+    <ClientLayout>
+      {/* Load the home page */}
+      <HomePg />
+    </ClientLayout>
   );
 }
