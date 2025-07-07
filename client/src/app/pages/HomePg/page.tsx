@@ -5,29 +5,31 @@ export default function HomePage() {
     <div className="flex h-screen w-full items-center justify-center bg-gray-900 ">
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
        
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center relative z-0">
           <img
             src="./bg.png"
             alt="Home Animation"
             className="max-w-full animate-fadeLeft"
           />
+          <button className="absolute bottom-4 left-1/2 transform px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-xl hover:bg-yellow-600 shadow-lg transition duration-300 transform md:hidden animate-fadeUp">
+              Start Planning
+          </button>
+          
         </div>
         
         {/*mobile view*/}
-        <div className="flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-yellow-50 to-white rounded-lg shadow-md md:hidden animate-fadeUp">
+        <div className="flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-yellow-50 to-white rounded-lg shadow-md md:hidden animate-fadeUp mx-1">
           <h1 className="text-4xl font-extrabold text-yellow-600 mb-4 text-left">
             Welcome to, <span className="text-gray-800 text-5xl text-center">Kasun Tours</span>
           </h1>
           <p className="text-sm text-gray-600 max-w-xl mb-6">
             Your next great adventure starts here. Explore breathtaking destinations, cultural treasures, and unforgettable memories — all with us.
           </p>
-          <button className="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-full hover:bg-yellow-600 shadow-lg transition duration-300 transform hover:scale-105">
-            Plan Your Tour
-          </button>
+
         </div>
 
         {/* desktop view */}
-<div className="flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-yellow-50 to-white rounded-lg shadow-md hidden md:block m-20 animate-fadeUp">
+<div className="flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-yellow-50 to-white rounded-lg shadow-md hidden md:block my-10 mx-20 animate-fadeUp">
   <div className="flex flex-col items-start justify-center mb-10">
     <h1 className="text-4xl font-extrabold text-yellow-600 mb-4 text-left">
       Welcome to,
@@ -40,7 +42,7 @@ export default function HomePage() {
       cultural treasures, and unforgettable memories — all with us.
     </p>
     <button className="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-full hover:bg-yellow-600 shadow-lg transition duration-300 transform hover:scale-105">
-      Plan Your Tour
+      Start Planning
     </button>
   </div>
 

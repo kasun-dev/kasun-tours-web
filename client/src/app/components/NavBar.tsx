@@ -15,7 +15,7 @@ export default function Page() {
     }
 
   return (
-    <div className='text-white text-sm fixed top-0 left-0 right-0 width-full'>
+    <div className='text-white text-sm fixed top-0 left-0 right-0 z-10 width-full'>
         <div className=" ">
             <div className="flex flex-row items-center justify-between max-w-7xl">
                 {/* logo and title desktop*/}
