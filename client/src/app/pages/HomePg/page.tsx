@@ -11,7 +11,7 @@ export default function HomePage() {
             alt="Home Animation"
             className="max-w-full animate-fadeLeft"
           />
-          <button className="absolute bottom-4 left-1/2 transform px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-xl hover:bg-yellow-600 shadow-lg transition duration-300 transform md:hidden animate-fadeUp">
+          <button className="absolute bottom-4 left-1/2 transform px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-xl hover:bg-yellow-600 shadow-lg transition duration-300 transform md:hidden animate-fadeUp animate-float">
               Start Planning
           </button>
           
