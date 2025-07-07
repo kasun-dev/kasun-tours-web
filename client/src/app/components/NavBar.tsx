@@ -16,17 +16,29 @@ export default function Page() {
 
   return (
     <div className='text-white text-sm fixed top-0 left-0 right-0 width-full'>
-        <div className="bg-gray-900 ">
+        <div className=" ">
             <div className="flex flex-row items-center justify-between max-w-7xl">
-                {/* logo and title*/}
-                <div className="flex"> 
-                    <p className="text-left text-xl text-yellow-500 font-bold pl-4 pt-4 pb-4">
+                {/* logo and title desktop*/}
+                <div className="flex bg-gray-800 rounded-2xl shadow-lg hidden md:flex ml-1 mt-1 animate-fadeLeft"> 
+                    <p className="text-left text-l text-yellow-500 font-bold pl-4 pt-3 pb-3">
                         Kasun
                     </p>
-                    <p className="text-left text-xl text-grey-900 font-bold mr-3 mt-3 mb-3 ml-1 bg-yellow-500 border-l-2 border-yellow-500 p-1 rounded-md">
+                    <p className="text-left text-l text-grey-900 font-bold mr-3 mt-2 mb-2 ml-1 bg-yellow-500 border-l-2 border-yellow-500 p-1 rounded-md">
                         Tours 
                     </p>
                 </div>
+
+                {/* logo and title mobile*/}
+                <div className="flex bg-gray-800 rounded-2xl shadow-lg md:hidden mt-1 ml-1 animate-fadeLeft"> 
+                    <p className="text-left text-m text-yellow-500 font-bold pl-4 pt-3 pb-3">
+                        Kasun
+                    </p>
+                    <p className="text-left text-m text-grey-900 font-bold mr-3 mt-2 mb-2 ml-1 bg-yellow-500 border-l-2 border-yellow-500 p-1 rounded-md">
+                        Tours 
+                    </p>
+                </div>
+
+
                 {/* Navigation buttons*/}
                 <div className="hidden md:flex">
                     <ul className="flex justify-center space-x-5 text-gray-300 text-sm">
