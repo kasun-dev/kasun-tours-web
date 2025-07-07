@@ -5,6 +5,7 @@
   --foreground: #ffffff;
 }
 
+/* Simulate Tailwind config theme variables (optional) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -23,4 +24,49 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === Custom Keyframe Animations === */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* === Utility Classes for Animation (like Tailwind would generate) === */
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out;
+}
+
+.animate-fadeLeft {
+  animation: fadeLeft 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
