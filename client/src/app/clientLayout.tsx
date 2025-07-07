@@ -2,9 +2,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import LoadingScreen from '@/components/LoadingScreen'
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
+import LoadingScreen from '@/app/components/LoadingScreen'
+import NavBar from '@/app/components/NavBar'
+import Footer from '@/app/components/Footer'
 import { Geist, Geist_Mono } from 'next/font/google'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
