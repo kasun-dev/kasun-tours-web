@@ -30,7 +30,7 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
           <p className="mb-2">📍 367/B2, Welivita, Kaduwela, Sri Lanka</p>
           <p className="mb-2">📞 +94 72 399 9927</p>
-          <p className="mb-2">📧 info@kasuntours.lk</p>
+          <p className="mb-2">📧 contact.kasuntours@gmail.com</p>
         </div>
 
         {/* Newsletter */}
