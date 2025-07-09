@@ -60,8 +60,9 @@ export default function Page() {
             <li><a href="/#home" className="hover:text-yellow-500">Home</a></li>
             <li><a href="/#services" className="hover:text-yellow-500">Services</a></li>
             <li><a href="/#contact" className="hover:text-yellow-500">Contact</a></li>
-            <li><a href="/tours" className="hover:text-yellow-500">Tours</a></li>
-            <li><a href="/gallery" className="hover:text-yellow-500">Gallery</a></li>
+            <li><a href="/#gallery" className="hover:text-yellow-500">Gallery</a></li>
+            <li><a href="/BookingPg" className="hover:text-yellow-500">Tours</a></li>
+            
           </ul>
         </div>
 
@@ -87,8 +88,9 @@ export default function Page() {
             <li><a href="/#home">Home</a></li>
             <li><a href="/#services">Services</a></li>
             <li><a href="/#contact">Contact</a></li>
-            <li><a href="/tours">Tours</a></li>
-            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/BookingPg">Tours</a></li>
+           
           </ul>
         </div>
       )}
