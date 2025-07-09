@@ -15,7 +15,7 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl">
         {/* Contact Form */}
-        <form className="bg-white text-gray-800 rounded-lg p-6 shadow-lg w-full">
+        <form className="text-gray-800 rounded-lg p-6 shadow-lg w-full bg-gradient-to-b from-yellow-50 to-white">
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Name</label>
             <input
