@@ -1,6 +1,6 @@
 'use client'
 
-import { Menu, SquareX } from 'lucide-react'
+import { Menu, SquareX, LogOut, CircleUser } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Page() {
@@ -37,7 +37,7 @@ export default function Page() {
 
   return (
     <div className="text-white text-sm fixed top-0 left-0 right-0 z-10 w-full">
-      <div className="flex flex-row items-center justify-between max-w-7xl mx-auto">
+      <div className="flex flex-row items-center justify-between mx-auto">
         {/* Desktop Logo */}
         <div className="flex bg-gray-800 rounded-2xl shadow-lg hidden md:flex ml-1 mt-1 animate-fadeLeft">
           <p className="text-l text-yellow-500 font-bold pl-4 pt-3 pb-3">Kasun</p>
@@ -64,6 +64,15 @@ export default function Page() {
             <li><a href="/BookingPg" className="hover:text-yellow-500">Tours</a></li>
             
           </ul>
+        </div>
+        <div className="hidden md:flex justify-right gap-5">
+          <button className='text-white hover:text-blue-500 rounded p-1 flex gap-1'>
+            <p className='pt-1'>LogIn</p> <CircleUser/>
+          </button>
+          <button className='text-white hover:text-red-500 rounded p-1 flex gap-1'>
+            <p className='pt-1'>LogOut</p> <LogOut/>
+          </button>
+          
         </div>
 
         {/* Mobile Menu Toggle Button */}
