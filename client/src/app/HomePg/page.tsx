@@ -12,7 +12,7 @@ export default function HomePage() {
             className="max-w-full animate-fadeLeft"
           />
           <button className="absolute bottom-4 left-1/2 transform px-4 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-xl hover:bg-yellow-600 shadow-lg transition duration-300 transform md:hidden animate-fadeUp animate-float">
-              Start Planning
+              <a href="/BookingPg">Start Planning</a>
           </button>
           
         </div>
@@ -37,13 +37,18 @@ export default function HomePage() {
     <span className="text-gray-800 text-5xl font-extrabold text-center mb-4">
       Kasun Tours
     </span>
-    <p className="text-md text-gray-600 max-w-xl mb-6">
+    <p className="text-md text-gray-600 max-w-xl mb-8">
       Your next great adventure starts here. Explore breathtaking destinations,
       cultural treasures, and unforgettable memories — all with us.
     </p>
-    <button className="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-full hover:bg-yellow-600 shadow-lg transition duration-300 transform hover:scale-105">
-      Start Planning
-    </button>
+    <div className="flex gap-5">
+      <button className="px-5 py-2 bg-yellow-500 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+      <a href="/BookingPg">Start Planning</a>
+      </button>
+      <button className="px-5 py-2 bg-gradient-to-b from-yellow-50 to-white border-2 border-yellow-500 text-gray-900 font-semibold rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+        <a href="/BookingPg">Create Account</a>
+      </button>
+    </div>
   </div>
 
     {/* Feature Cards */}
