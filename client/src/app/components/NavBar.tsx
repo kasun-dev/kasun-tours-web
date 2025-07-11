@@ -115,17 +115,7 @@ export default function Page() {
         </div>
       )}
       {/* Conditionally render modal */}
-      {showLogin && 
-        <div>
-          <div className='md:hidden mx-2'>
-          <LoginForm onClose={() => setShowLogin(false)} />
-        </div>
-        <div className='hidden md:flex'>
-          <LoginForm onClose={() => setShowLogin(false)} />
-        </div>
-        </div>
-        
-      }
+      {showLogin && <LoginForm onClose={() => setShowLogin(false)} /> }
     </div>
   )
 }
