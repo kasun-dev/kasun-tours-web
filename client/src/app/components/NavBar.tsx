@@ -2,10 +2,12 @@
 
 import { Menu, SquareX, LogOut, CircleUser } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import LoginForm from "../components/LoginForm";
 
 export default function Page() {
   const [onClick, setOnClick] = useState(true)
   const menuRef = useRef<HTMLDivElement>(null)
+  const [showLogin, setShowLogin] = useState(false) //login screen
 
   // Handle menu toggle
   const MenuButtonClick = () => {
@@ -35,6 +37,9 @@ export default function Page() {
     }
   }, [onClick])
 
+  const handleLogin = () => {
+    setShowLogin(true)
+  }
   return (
     <div className="text-white text-sm fixed top-0 left-0 right-0 z-10 w-full">
       <div className="flex flex-row items-center justify-between mx-auto">
@@ -66,7 +71,7 @@ export default function Page() {
           </ul>
         </div>
         <div className="hidden md:flex justify-right gap-5">
-          <button className='text-white hover:text-blue-500 rounded p-1 flex gap-1'>
+          <button onClick={handleLogin} className='text-white hover:text-blue-500 rounded p-1 flex gap-1'>
             <p className='pt-1'>LogIn</p> <CircleUser/>
           </button>
           <button className='text-white hover:text-red-500 rounded p-1 flex gap-1'>
@@ -99,10 +104,28 @@ export default function Page() {
             <li><a href="/#contact">Contact</a></li>
             <li><a href="/#gallery">Gallery</a></li>
             <li><a href="/BookingPg">Tours</a></li>
+            
+            <div className='text-white space-y-2 ml-5 mt-2'>
+              <li onClick={handleLogin}>LogIn</li>
+              <li>SignIn</li>
+              <li>LogOut</li>
+            </div>
            
           </ul>
         </div>
       )}
+      {/* Conditionally render modal */}
+      {showLogin && 
+        <div>
+          <div className='md:hidden mx-2'>
+          <LoginForm onClose={() => setShowLogin(false)} />
+        </div>
+        <div className='hidden md:flex'>
+          <LoginForm onClose={() => setShowLogin(false)} />
+        </div>
+        </div>
+        
+      }
     </div>
   )
 }
