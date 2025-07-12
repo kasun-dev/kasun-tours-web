@@ -3,11 +3,15 @@
 import { Menu, SquareX, LogOut, CircleUser } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import LoginForm from "../components/LoginForm";
+import SignInForm from './signInForm';
+import LogoutForm from './logoutForm';
 
 export default function Page() {
   const [onClick, setOnClick] = useState(true)
   const menuRef = useRef<HTMLDivElement>(null)
   const [showLogin, setShowLogin] = useState(false) //login screen
+  const [showSignin,setShowSignin] = useState(false) //signin screen
+  const [showLogout,setShowLogout] = useState(false) //logout
 
   // Handle menu toggle
   const MenuButtonClick = () => {
@@ -37,9 +41,16 @@ export default function Page() {
     }
   }, [onClick])
 
-  const handleLogin = () => {
+  const handleLogin = () => { //login
     setShowLogin(true)
   }
+  const handleSignin = () => { //signin
+    setShowSignin(true)
+  }
+  const handleLogout = () => { //logout
+    setShowLogout(true)
+  }
+
   return (
     <div className="text-white text-sm fixed top-0 left-0 right-0 z-10 w-full">
       <div className="flex flex-row items-center justify-between mx-auto">
@@ -74,7 +85,8 @@ export default function Page() {
           <button onClick={handleLogin} className='text-white hover:text-blue-500 rounded p-1 flex gap-1'>
             <p className='pt-1'>LogIn</p> <CircleUser/>
           </button>
-          <button className='text-white hover:text-red-500 rounded p-1 flex gap-1'>
+          <button className='text-white hover:text-red-500 rounded p-1 flex gap-1'
+          onClick={handleLogout}>
             <p className='pt-1'>LogOut</p> <LogOut/>
           </button>
           
@@ -107,25 +119,19 @@ export default function Page() {
             
             <div className='text-white space-y-2 ml-5 mt-2'>
               <li onClick={handleLogin}>LogIn</li>
-              <li>SignIn</li>
-              <li>LogOut</li>
+              <li onClick={handleSignin}>SignIn</li>
+              <li onClick={handleLogout}>LogOut</li>
             </div>
            
           </ul>
         </div>
       )}
-      {/* Conditionally render modal */}
-      {showLogin && 
-        <div>
-          <div className='md:hidden mx-2'>
-          <LoginForm onClose={() => setShowLogin(false)} />
-        </div>
-        <div className='hidden md:flex'>
-          <LoginForm onClose={() => setShowLogin(false)} />
-        </div>
-        </div>
-        
-      }
+      {/* login form */}
+        {showLogin && <LoginForm onClose={() => setShowLogin(false)} /> }
+      {/*SignIn form */}
+        {showSignin && <SignInForm onClose ={() => setShowSignin(false)}/>}
+      {/*logout*/}
+        {showLogout && <LogoutForm onClose ={()=> setShowLogout(false)}/>}
     </div>
   )
 }
